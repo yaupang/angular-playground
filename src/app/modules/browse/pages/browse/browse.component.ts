@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-browse',
@@ -7,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrowseComponent implements OnInit {
 
-  userName: string;
+  userName: FormControl = new FormControl('');
+  asd: FormControl = new FormControl('asd');
+
+
+
 
   constructor( ) { }
 
   ngOnInit() {
+  }
+
+  inputValueCount(inputValue) {
+    inputValue = inputValue.length;
+    console.log(inputValue);
   }
 
 }
