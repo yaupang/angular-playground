@@ -1,0 +1,1 @@
+*{font-family:Arial,Helvetica,sans-serif}body,html{padding:0;margin:0}app-browse,app-home,app-tictac{display:block;padding:2em;min-width:500px;max-width:50%}app-browse h1,app-home h1,app-tictac h1{font-weight:800}.box{border:1px solid #c3c3c3;padding:3em}.box:not(:first-of-type){margin-top:2em}

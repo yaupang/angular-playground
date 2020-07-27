@@ -9,7 +9,9 @@ import { InputMaxValDirective } from './shared/directives/input-max-val/input-ma
 import { HttpClientModule } from '@angular/common/http';
 import { TictacComponent } from './modules/games/pages/tictac/tictac.component';
 import { SquareComponent } from './modules/games/components/square/square.component';
-import { BoardComponent } from './modules/games/components/board/board.component'
+import { BoardComponent } from './modules/games/components/board/board.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { BoardComponent } from './modules/games/components/board/board.component
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

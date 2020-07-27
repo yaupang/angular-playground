@@ -1,0 +1,80 @@
+{
+  "configVersion": 1,
+  "timestamp": 1595873165787,
+  "index": "/angular-playground/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/angular-playground/favicon.ico",
+        "/angular-playground/index.html",
+        "/angular-playground/main-es2015.f5cb32a35c3d0b4af346.js",
+        "/angular-playground/main-es5.f5cb32a35c3d0b4af346.js",
+        "/angular-playground/manifest.webmanifest",
+        "/angular-playground/polyfills-es2015.ffa9bb4e015925544f91.js",
+        "/angular-playground/polyfills-es5.44547b4d4a23c72d0f9c.js",
+        "/angular-playground/runtime-es2015.cdfb0ddb511f65fdc0a0.js",
+        "/angular-playground/runtime-es5.cdfb0ddb511f65fdc0a0.js",
+        "/angular-playground/styles.20dfc67d4ec5aa52f350.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/angular-playground/assets/icons/icon-128x128.png",
+        "/angular-playground/assets/icons/icon-144x144.png",
+        "/angular-playground/assets/icons/icon-152x152.png",
+        "/angular-playground/assets/icons/icon-192x192.png",
+        "/angular-playground/assets/icons/icon-384x384.png",
+        "/angular-playground/assets/icons/icon-512x512.png",
+        "/angular-playground/assets/icons/icon-72x72.png",
+        "/angular-playground/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/angular-playground/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/angular-playground/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/angular-playground/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/angular-playground/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/angular-playground/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/angular-playground/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/angular-playground/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/angular-playground/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/angular-playground/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/angular-playground/index.html": "4e9aef4bfa76e086f98be92e9563751ee9fb58bc",
+    "/angular-playground/main-es2015.f5cb32a35c3d0b4af346.js": "442435c683bad571f552e49d7004bc9228b85594",
+    "/angular-playground/main-es5.f5cb32a35c3d0b4af346.js": "6efec5d3270d2edb0b163833c557457fe50f1d9a",
+    "/angular-playground/manifest.webmanifest": "a3be22fd79cad07ef751aece0fa19e3920746d2b",
+    "/angular-playground/polyfills-es2015.ffa9bb4e015925544f91.js": "79b2ff5ba292ae9e56f0b43982b9e76d9ddcf285",
+    "/angular-playground/polyfills-es5.44547b4d4a23c72d0f9c.js": "529614f798f0a342b63b1229894f3c8b632fa4a3",
+    "/angular-playground/runtime-es2015.cdfb0ddb511f65fdc0a0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/angular-playground/runtime-es5.cdfb0ddb511f65fdc0a0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/angular-playground/styles.20dfc67d4ec5aa52f350.css": "a8e276239d20d0ee7a7cd1580e57ca483966f001"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
