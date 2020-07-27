@@ -11,13 +11,16 @@ export class InputMaxValDirective implements OnInit, OnDestroy {
   counterLength: HTMLElement;
   counterMaxLength: HTMLElement;
   counterSeparator: HTMLElement;
+  errorMsgEl: HTMLElement;
+  errorMsg: any;
+  errorMsgCheck: boolean = true;
   @Input() maxLength: number;
   subscription: Subscription = new Subscription;
 
 
   constructor(private el: ElementRef, private renderer: Renderer2, private control: NgControl) {
     this.renderer.addClass(this.el.nativeElement, 'counter-class');
-    console.log(control);
+    //console.log(control);
   }
 
   ngOnInit() {
@@ -30,7 +33,7 @@ export class InputMaxValDirective implements OnInit, OnDestroy {
     this.renderer.addClass( this.counterSeparator, 'counter-separator');
     this.renderer.setProperty( this.counterSeparator, 'innerHTML', '/');
     this.renderer.addClass( this.counterMaxLength, 'counter-max-length');
-
+    
     this.renderer.appendChild(this.counterEl, this.counterLength);
     this.renderer.appendChild(this.counterEl, this.counterSeparator);
     this.renderer.appendChild(this.counterEl, this.counterMaxLength);
@@ -59,21 +62,34 @@ export class InputMaxValDirective implements OnInit, OnDestroy {
   }
 
   updateCounter(counter) {
-    //this.renderer.setProperty(this.counterEl, 'innerHTML', counter);   
     this.renderer.setProperty(this.counterLength, 'innerHTML', counter);   
     this.renderer.setProperty(this.counterMaxLength, 'innerHTML', this.maxLength);   
     //console.log(this.el.nativeElement.value.length);
   }
 
   checkMaxLength(currentLength) {
-    console.log(currentLength);
+    //console.log(currentLength);
 
-    if (currentLength > this.maxLength) {
-      console.log('above length');
+    if (currentLength > this.maxLength && this.errorMsgCheck) {
       this.renderer.addClass(this.el.nativeElement, 'alert');
-    } else if(this.el.nativeElement.classList.contains('alert')) {
+
+      this.errorMsgEl = this.renderer.createElement('div');
+      this.errorMsg = this.renderer.createText('Exceeds max length');
+      this.renderer.appendChild(this.errorMsgEl, this.errorMsg);
+      this.renderer.appendChild(this.counterEl, this.errorMsgEl);
+      
+      this.errorMsgCheck = false;
+    } 
+    else if(this.el.nativeElement.classList.contains('alert')) {
       this.renderer.removeClass(this.el.nativeElement, 'alert');
     }
+
+    if (currentLength <= this.maxLength && this.errorMsgCheck == false) {
+      this.renderer.removeChild(this.counterEl, this.errorMsgEl);
+      this.errorMsgCheck = true;
+    }
+
+
   }
 
 }

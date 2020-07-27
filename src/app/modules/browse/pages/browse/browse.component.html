@@ -1,12 +1,34 @@
-<p>browse works!</p>
+<h1>Browse</h1>
 
+<div class="box">
+   
+    <h2>Text counter test</h2>
 
-<div style="border: 1px solid #c3c3c3; padding: 3em;">
-    <input type="text" [maxLength]="5" [formControl]="userName" placeholder="Type something">
+    <input 
+        type="text" 
+        [maxLength]="5" 
+        [formControl]="userName" 
+        placeholder="Type something">
     
 <!--     <div>
         Writing:
         <br>
         {{ userName }}
     </div> -->
+</div>
+
+<div class="box">
+    
+    <h1>Breweries API test</h1>
+
+    <ul *ngIf="!brews">
+        Loading...
+    </ul>
+    <ul *ngIf="brews">
+        <li *ngFor="let brew of brews">
+            <div class="brew-name">{{ brew.name }}</div>
+            <div class="brew-type">{{ brew.brewery_type }}</div>
+            <a [href]="brew.website_url">{{ brew.website_url }}</a>
+        </li>
+    </ul>
 </div>

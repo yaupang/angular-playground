@@ -1,17 +1,19 @@
-<p>home works!</p>
+<h1>Home</h1>
 
-<div style="border: 1px solid #c3c3c3; padding: 3em;">
+<div class="box">
     <button (click)="countClick()">Click me</button>
     {{ clickCounter }}
 </div>
 
 
-<div    [ngClass]="setClasses()" 
-        [ngStyle]="{
-            'background-color': clickCounter > 4 ? 'yellow' : 'orange',
-            'border':           clickCounter > 6 ? '3px solid red' : ''
-            }">
-    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">Clicked more than 4 times</ng-template>
+<div  
+    [ngClass]="setClasses()" 
+    [ngStyle]="{
+        'background-color': clickCounter > 4 ? 'yellow' : 'orange',
+        'border':           clickCounter > 10 ? '3px solid red' : ''
+        }">
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">Clicked more than 4 times.</ng-template>
+    <ng-template [ngIf]="clickCounter > 10"><div>Stop clicking!</div></ng-template>
     
     <ng-template #none>You have not clicked this more than 4 times</ng-template>
 </div>

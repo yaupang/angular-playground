@@ -1,0 +1,27 @@
+.board {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.newgame-button {
+    background-color: black;
+    padding: 12px 48px;
+    border: none;
+    margin: 1em 0;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #3f3f3f;
+    }
+}

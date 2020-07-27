@@ -2,3 +2,24 @@
     //Used for directive "input-max-val"
     box-shadow: 0 0 0 2px red;
 }
+
+.main-nav {
+    padding: 2em 1em;
+    background-color: black;
+    
+    button {
+        padding: 12px 48px;
+        outline: none;
+        border: none;
+        margin-right: 1em;
+        border-radius: 8px;
+        background-color: white;
+        font-size: 1.4em;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #e5e5e5;
+        }
+    }
+}

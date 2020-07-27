@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { HttpService } from '../../../../http.service';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-browse',
@@ -8,15 +11,27 @@ import { FormControl } from '@angular/forms';
 })
 export class BrowseComponent implements OnInit {
 
+  subscription: Subscription = new Subscription;
   userName: FormControl = new FormControl('');
-  asd: FormControl = new FormControl('asd');
+  brews: Object;
+  exceedMaxLength: number;
 
 
 
 
-  constructor( ) { }
+  constructor(private _http: HttpService) { }
 
   ngOnInit() {
+    this.subscription.add(
+      this._http.getBeer().subscribe(data => {
+        this.brews = data;
+        console.log(this.brews);
+      })
+    );
+  }
+  
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   inputValueCount(inputValue) {

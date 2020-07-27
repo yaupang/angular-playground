@@ -1,0 +1,19 @@
+<h2 style="color:hotpink">
+    <span *ngIf="!winner">Current player: {{ player }}</span>
+    <span *ngIf="winner">{{ winner }} won the game!</span>
+</h2>
+
+<div class="board">
+    <tic-square 
+    *ngFor="let val of squares; let i = index"
+    [value]="val"
+    (click)="makeMove(i)"
+    [ngClass]="{'disable' : winner}"
+    >
+    </tic-square>
+</div>
+
+
+<button (click)="newGame()" class="newgame-button">
+    New game
+</button>

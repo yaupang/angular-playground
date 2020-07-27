@@ -1,0 +1,23 @@
+ul {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 1em;
+    padding-inline-start: 0;
+}
+
+li {
+    background-color: #ededed;
+    list-style: none;
+    padding: 1.2em;
+    border-radius: 12px;
+    min-height: 150px;
+
+}
+
+.brew-name {
+    font-weight: 800;
+}
+
+.brew-type {
+    color: grey;
+}
